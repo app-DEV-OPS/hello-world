@@ -2,15 +2,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example.maven-project</groupId>
-  <artifactId>maven-project</artifactId>
-  <packaging>pom</packaging>
+  <groupId>com.hcl.Adhi-02-08-2021</groupId>
+  <artifactId>Hello</artifactId>
   <version>1.0-SNAPSHOT</version>
+   <packaging>war</packaging>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
 
   <properties>
+    <sonar.host.url>http://35.238.138.203:9000</sonar.host.url>
+    <sonar.login>admin</sonar.login>
+    <sonar.password>admin123</sonar.password>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
   </properties>
@@ -204,13 +207,16 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <scm>
-    <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
-    <developerConnection>scm:git:git@github.com:jleetutorial/maven-project.git</developerConnection>
-    <tag>HEAD</tag>
-    <url>http://github.com/jleetutorial/maven-project</url>
-  </scm>
+  <distributionManagement>
+         <snapshotRepository>
+       	         <id>nexus</id>
+       		<url>http://ec2-35-154-90-22.ap-south-1.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
+    	</snapshotRepository>
+         <repository>
+       	         <id>nexus</id>
+      		<url>http://ec2-35-154-90-22.ap-south-1.compute.amazonaws.com:8081/repository/maven-releases/</url>
+   	</repository>
+   </distributionManagement>
 
   <prerequisites>
     <maven>3.0.3</maven>
