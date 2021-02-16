@@ -13,7 +13,7 @@
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-     <sonar.host.url>http://35.238.138.203:9000</sonar.host.url>
+     <sonar.host.url>http://35.154.90.22:9000</sonar.host.url>
      <sonar.login>admin</sonar.login>
      <sonar.password>admin123</sonar.password>
   </properties>
@@ -26,11 +26,11 @@
   <distributionManagement>
          <snapshotRepository>
        	         <id>nexus</id>
-       		<url>http://ec2-35-154-90-22.ap-south-1.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
+       		<url>http://35.154.90.22:8081/repository/maven-snapshots/</url>
     	</snapshotRepository>
    	         <repository>
        		         <id>nexus</id>
-      			 <url>http://ec2-35-154-90-22.ap-south-1.compute.amazonaws.com:8081/repository/maven-releases/</url>
+      			 <url>http://35.154.90.22:8081/repository/maven-releases/</url>
    		 </repository>
         <site>
                   <id>site-server</id>
